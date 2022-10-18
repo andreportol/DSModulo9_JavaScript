@@ -1,3 +1,4 @@
+
 const elemento = document.getElementById("dados")// recupera os elementos
 const conteudo = elemento.innerHTML.split('\n')// coloca os elementos dentro de um array
 const dados = conteudo.map(x => Number(x)); // transforma o conteudo String em Numeric

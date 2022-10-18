@@ -57,3 +57,11 @@ console.log(`percorrendo o array idades:`)
 for (let i = 0; i < idades.length; i++) {
     console.log(`${idades[i]}`)
 }
+
+// percorrer um array com o for each
+
+frutas = ['banana', 'laranja', 'uva'];
+console.log('Teste percorrendo um array com foreach.')
+frutas.forEach(item => {
+    console.log(item)
+});
