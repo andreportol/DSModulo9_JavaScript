@@ -5,7 +5,7 @@ function soma(num1, num2) {
 console.log(soma(3, 4))
 
 // outra forma de declarar uma função
-const soma2 = function sum(num1, num2) {
+const soma2 = function(num1, num2) {
     return num1 + num2
 }
 console.log(soma2(4, 7))
