@@ -31,15 +31,22 @@ const dados = [
   },
 ];
 
+
 //---------------------------------------------------------------------------
 // FUNCAO funcionariosTerceirizados
 // Parâmetros:
-//   list: lista de funcionarios
+// list: lista de funcionarios
 // Efeito: retorna uma lista contendo somente os funcionários terceirizados
 //---------------------------------------------------------------------------
 
 function funcionariosTerceirizados(list) {
-
+  const funcionarios = [];
+  for( let i = 0; i < list.length; i++){
+    if(list[i].terceirizado){
+        funcionarios.push(list[i])
+    }
+  }
+  return funcionarios
 }
 
 //---------------------------------------------------------------------------
@@ -50,7 +57,11 @@ function funcionariosTerceirizados(list) {
 //---------------------------------------------------------------------------
 
 function custoTotal(list) {
-
+  let valor = 0;
+  for(let i = 0; i < list.length; i++){
+    valor = valor + (list[i].valorHora * list[i].horasTrabalhadas)
+  }
+  return valor;
 }
 
 //---------------------------------------------------------------------------
@@ -58,7 +69,6 @@ function custoTotal(list) {
 //---------------------------------------------------------------------------
 
 const terceirizados = funcionariosTerceirizados(dados);
-
 const custoTerceirizados = custoTotal(terceirizados);
 
 console.log(
